@@ -8,6 +8,8 @@ This project demonestrates how to use CDK to deply a simple web application to A
 
 then run `cdk --version` to verify the installation.
 
+- If you did not bootstrap CDK on your current AWS account, run `cdk bootstrap` to bootstrap CDK on your current AWS account.
+
 2. Create a new folder for the app named `cdk-app`
 
 3. cd to the folder cdk-app and run `cdk init app --language typescript` to create a new CDK app.

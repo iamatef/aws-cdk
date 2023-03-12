@@ -1,14 +1,29 @@
 # Welcome to your CDK TypeScript project
 
-This is a blank project for CDK development with TypeScript.
+This project demonestrates how to use CDK to deply a simple web application to AWS.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+1. Install the CDK CLI if you haven't already:
 
-## Useful commands
+`npm install -g aws-cdk`
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+then run `cdk --version` to verify the installation.
+
+2. Create a new folder for the app named `cdk-app`
+
+3. cd to the folder cdk-app and run `cdk init app --language typescript` to create a new CDK app.
+
+this will create a new CDK Type Script app in the folder cdk-app.
+
+4. Modify the stack file `cdk-app/lib/cdk-app-stack.ts` to create a new S3 bucket and a new DynamoDB table.
+
+this file is where you add your CDK code for the resources you want to create.
+
+5. Run `cdk synth` to synthesize the CloudFormation template for the stack.
+
+this will create a CF template in the folder cdk-app/cdk.out which will be deployed to AWS as a stack.
+
+6. Run `cdk deploy` to deploy the stack to AWS.
+
+this will deploy the stack to AWS and create the resources defined in the stack.
+
+7. Run `cdk destroy` to destroy the stack.
